@@ -14,7 +14,7 @@ const TypingAnimationWithPause = () => {
         const currentText = textArray[index];
         if (isDeleting) {
           setDisplayedText((prev) => prev.slice(0, prev.length - 1));
-          setDelay(100); // Faster speed when deleting
+          setDelay(100);
           if (displayedText === "") {
             setIsDeleting(false);
             setIndex((prevIndex) => (prevIndex + 1) % textArray.length);
@@ -22,10 +22,10 @@ const TypingAnimationWithPause = () => {
         } else {
           setDisplayedText((prev) => currentText.slice(0, charIndex + 1));
           if (displayedText === currentText) {
-            setDelay(2000); // Pause before deleting
+            setDelay(2000);
             setIsDeleting(true);
           } else {
-            setDelay(100); // Typing speed
+            setDelay(100);
           }
         }
         setCharIndex((prev) => (isDeleting ? prev - 1 : prev + 1));
@@ -36,7 +36,7 @@ const TypingAnimationWithPause = () => {
     }, [displayedText, charIndex, isDeleting, delay, textArray, index]);
   
     return (
-      <div style={{ fontFamily: "monospace", fontSize: "24px", color: 'violet' }}>
+      <div style={{ fontFamily: "monospace", fontSize: "24px", color: 'var(--theme-font-color)' }}>
         {displayedText}
         <span className="cursor">|</span>
       </div>
