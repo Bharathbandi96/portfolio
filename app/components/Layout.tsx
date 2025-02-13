@@ -1,12 +1,9 @@
-import {ReactNode, FC} from 'react';
+import { FC } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { ILayoutProps } from './types';
 
-interface LayoutProps {
-    children: ReactNode;
-  }
-
-const Layout:FC<LayoutProps> = ({ children } ) => (
+const Layout: FC<ILayoutProps> = ({ children }) => (
   <>
     <Header />
     <main>{children}</main>

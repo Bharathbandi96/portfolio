@@ -1,29 +1,12 @@
-import styles from './components.module.css';
+import SkillBar from './skill-bar';
+import { skills } from './data';
 
-const skills = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'TypeScript',
-  'Node.js',
-  'Redux',
-  'Webpack',
-];
-
-function Skills() {
-  return (
-    <section id="skills" className={styles.skillsSection}>
-      <h2>Skills</h2>
-      <ul className={styles.skillsList}>
-        {skills.map((skill) => (
-          <li key={skill} className={styles.skillItem}>
-            {skill}
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
+const Skills = () => (
+  <div className="p-6">
+    {skills.map((skill, index) => (
+      <SkillBar key={index} data={skill} />
+    ))}
+  </div>
+);
 
 export default Skills;

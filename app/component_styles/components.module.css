@@ -1,0 +1,31 @@
+.navLinks {
+  @apply inline-flex text-[var(--foreground)] opacity-0 font-extrabold animate-animTop [animation-delay:calc(0.2s_*_var(--i))] hover:text-[var(--theme-font-color)]
+}
+
+.theme {
+  @apply w-[20px] h-[20px] cursor-pointer text-clip overflow-hidden rounded-full m-1 text-transparent select-none
+}
+
+.quicklink {
+  @apply w-[35px] h-[35px] text-[22px] p-[6px] border border-[var(--theme-font-color)] text-[var(--theme-font-color)] mr-[20px] rounded-full hover:text-[var(--primary-color)] hover:bg-[var(--theme-font-color)] hover:border-[var(--theme-font-color)];
+}
+
+.linkButton {
+  @apply inline-block mt-6 px-6 py-3 bg-[var(--theme-font-color)] text-[var(--background)] rounded-full font-bold uppercase no-underline mr-4 border border-[var(--theme-font-color)] animate-animLeft hover:text-[var(--theme-font-color)] hover:bg-[var(--background)]
+}
+
+.contactImageContainer {
+  @apply flex items-start my-0 mx-auto text-[1.1rem] leading-[4rem] text-[var(--secondary-font-color)] text-left;
+}
+
+.contactImage {
+  @apply !flex items-center w-[20px] h-[64px] mr-[10px] text-[var(--theme-font-color)]
+}
+
+.formFields {
+  @apply w-[100%] p-4 my-[0.5rem] mx-0 border-[var(--secondary-font-color)] rounded-[5px] text-[var(--secondary-font-color)]
+}
+
+.topSkills {
+  @apply w-[35px] h-[35px] text-[22px] p-[6px] bg-[var(--background)] text-[var(--theme-font-color)] mr-[5px] rounded-full;
+}
