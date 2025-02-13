@@ -1,7 +1,7 @@
 import Link from "next/link";
 // import Image from "next/image";
 import styles from "../component_styles/components.module.css";
-import TypingAnimationWithPause from "./TextAnimation";
+import TypingAnimationWithPause from "./text_animation";
 import { headline } from './data';
 
 const Home = () => (
@@ -41,7 +41,7 @@ const Home = () => (
           <i className={`bx bxl-facebook ${styles.quicklink}`} />
         </Link>
       </div>
-      <Link href="#projects" className={styles.cta}>
+      <Link href="#projects" className={styles.linkButton}>
         View My Work
       </Link>
       <Link 
