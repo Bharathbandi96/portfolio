@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from '../component_styles/components.module.css';
 import { projectList } from './data';
 
 const Projects = () => (
