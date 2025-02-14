@@ -17,7 +17,8 @@
 }
 
 .theme2 {
-  --theme-font-color: #16ff00;
+  --theme-font-color: #067cb2; 
+  /* #08105b; */
 }
 
 .theme3 {
@@ -27,17 +28,6 @@
 .theme4 {
   --theme-font-color: orange;
 }
-
-/* .link-buttons {
-  @apply inline-block mt-6 px-6 py-3 bg-[var(--theme-font-color)] text-[var(--background)] rounded-full font-bold uppercase no-underline mr-4 border border-[var(--theme-font-color)] animate-animLeft
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 body {
   color: var(--foreground);
