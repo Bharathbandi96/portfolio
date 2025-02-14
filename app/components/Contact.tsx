@@ -44,8 +44,11 @@ const Contact = () => {
         setStatus(result.error);
       }
     } catch (error) {
-      console.error(error);
-      error ? setStatus(error as string) : setStatus('Failed to send message');
+      if (error) {
+        setStatus(error as string)
+      } else {
+        setStatus('Failed to send message');
+      }
     }
   };
 
@@ -56,7 +59,7 @@ const Contact = () => {
           <h2>Quick Contact</h2>
           <p><i className='bx bxs-phone'></i><strong>Phone</strong>: +44 7770514283</p>
           <p><i className='bx bxl-gmail'></i><strong>Email</strong>: bharathbandi96@gmail.com</p>
-          <p><i className='bx bxs-map'></i><strong>Location</strong>: Flat 1, 210 Eccles Old Road, Salford, Manchester, United Kingdom - M6 8AL</p>
+          <p><i className='bx bxs-map'></i><strong>Location</strong>: Manchester, United Kingdom</p>
         </div>
         <div className={styles.contactSubContainer}>
           <h2>Contact Me</h2>

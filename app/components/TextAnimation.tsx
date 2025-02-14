@@ -20,7 +20,7 @@ const TypingAnimationWithPause = () => {
             setIndex((prevIndex) => (prevIndex + 1) % textArray.length);
           }
         } else {
-          setDisplayedText((prev) => currentText.slice(0, charIndex + 1));
+          setDisplayedText(() => currentText.slice(0, charIndex + 1));
           if (displayedText === currentText) {
             setDelay(2000);
             setIsDeleting(true);
