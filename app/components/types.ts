@@ -32,10 +32,12 @@ interface ILayoutProps {
 interface IProjects {
     title: string,
     description: string,
-    link: string
+    link: string,
+    type: string,
     image?: string,
     imageName?: string,
 }
+
 export type {
     ISkills,
     ISkillProps,

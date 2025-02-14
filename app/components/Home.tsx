@@ -22,7 +22,7 @@ const Home = () => (
         </strong>
       </div>
       <div className="w-[100%] flex flex-nowrap justify-start items-center mb-[15px] font-bold">
-        And I am {"<"}
+        And I am {"< "}
         <TypingAnimationWithPause />
         {"/>"}
       </div>

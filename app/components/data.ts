@@ -97,20 +97,23 @@ const projectList: IProjects[] = [
         imageName: 'Notifier',
         description: "The Notifier Component is a versatile notification system designed to enhance user interactions with real-time alerts. It supports five distinct notification types: success, information, confirm, warning, and error. Each type maintains its own independent stack, allowing multiple notifications of the same type to be queued and displayed sequentially. Notifications are shown one at a time for 3 seconds by default, with an intuitive hover feature that keeps the notification visible until the mouse is removed. The component is globally accessible, enabling seamless integration and usage from anywhere within the application.",
         image: "notifier.jpg",
-        link: 'https://notifiercomponent.vercel.app/'
+        link: 'https://notifiercomponent.vercel.app/',
+        type: 'Feature'
     },
     {
         title: "To-Do List Application",
         imageName: 'To-do List',
         description: "A feature-rich To-Do List application designed with an MVC architecture to ensure a clear separation of concerns and maintainability. The application supports full CRUD operations-allowing users to create, read, update, and delete tasks effortlessly. It leverages local and session storage to preserve tasks across sessions or within a single browsing session, based on user preference. Users can filter tasks dynamically by their status: All, Completed, or Pending, for enhanced task management. Additionally, it includes a convenient option to clear all completed tasks in one click, ensuring an efficient and user-friendly experience.",
         image: 'ToDo.png',
-        link: 'https://mytodo-application.vercel.app/'
+        link: 'https://mytodo-application.vercel.app/',
+        type: 'App'
     },
     // {
     //     title: "ID Generator",
     //     imageName: 'Unique ID Generator',
     //     description: "This component is a high-performance unique ID generator that leverages a Web Worker to ensure smooth operation without blocking the main thread. It maintains a pool of 1,000 pre-generated unique IDs at all times, efficiently providing IDs as needed. When IDs are used, the component dynamically generates new ones to replenish the pool, ensuring a continuous supply. By offloading the generation process to a Web Worker, it optimizes performance and prevents UI lag, making it ideal for applications that require scalable and efficient ID management.", 
     //     image: 'ToDo.png',
+    //     type: 'Feature',
     //     link: 'https://stackblitz.com/edit/mytodo-application?file=index.html'
     // },
     {
@@ -118,7 +121,8 @@ const projectList: IProjects[] = [
         imageName: 'Document Viewer',
         description: "A Document Viewer is a web-based application that allows users to view and manage various document formats, such as PDFs, Word, Excel sheets, and images, without the need for additional software installations. It provides an intuitive interface where users can easily view folders, and files within documents efficiently. The viewer includes a sorting feature that enables users to organize files alphabetically or by date, making it easier to locate specific documents. Additionally, it offers a search functionality that allows users to quickly find files by name, ensuring seamless document access and management.",
         image: 'ToDo.png',
-        link: 'https://document-viewer-five.vercel.app/'
+        link: 'https://document-viewer-five.vercel.app/',
+        type: 'App'
     },
 ];
 

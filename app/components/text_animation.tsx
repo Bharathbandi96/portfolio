@@ -7,7 +7,7 @@ const TypingAnimationWithPause = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [delay, setDelay] = useState(100);
-  const textArray = useMemo(() => ["React Developer", "Javascript Developer", "Frontend Developer"], []);
+  const textArray = useMemo(() => ["React Developer", "MERN Developer", "Frontend Developer", "Full Stack Developer"], []);
 
   useEffect(() => {
     const handleTyping = () => {
