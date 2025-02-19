@@ -6,18 +6,18 @@ import { headline } from './data';
 
 const Home = () => (
   <section
-    className="h-[calc(100vh-60px)] text-[var(--foreground)] p-5 bg-[var(--primary-color)]"
+    className="h-[calc(100vh-60px)] text-sm md:text-base text-[var(--foreground)] p-8 bg-[var(--primary-color)]"
     id="home"
   >
     {/* <div className="absolute w-[120px] h-[120px] bg-[var(--theme-font-color)] -left-[60px] rotate-[45deg] top-[150px]" /> */}
-    <div className="flex h-[90%] max-w-[90%] justify-start flex-wrap content-center ml-[40px] animate-animRight [animation-delay:.1s]">
-      <div className="w-[100%]">
+    <div className="flex h-[90%] md:max-w-[90%] justify-start flex-wrap content-center md:ml-[40px] animate-animRight [animation-delay:.1s]">
+      <div className="w-[100%] pb-4 md:pb-0">
         <strong>
           {"Hey, It's me"}
         </strong>
       </div>
-      <div className="w-[100%]">
-        <strong className="text-[32px]">
+      <div className="w-[100%] pb-4 md:pb-0">
+        <strong className="text-lg md:text-[32px]">
           Bharath Bandi Ramakrishna
         </strong>
       </div>
@@ -26,7 +26,7 @@ const Home = () => (
         <TypingAnimationWithPause />
         {"/>"}
       </div>
-      <p className="max-w-[500px] mb-[15px]">{headline}</p>
+      <p className="md:max-w-[500px] mb-[15px]">{headline}</p>
       <div className="w-[100%]">
         <Link href={process.env.NEXT_PUBLIC_LINKEDIN_URL as string} target="_blank">
           <i className={`bx bxl-linkedin ${styles.quicklink}`} />
@@ -53,7 +53,7 @@ const Home = () => (
       </Link>
     </div>
     {/* <Image src="/Adobe Express - file.png" alt="Profile Photo" className="absolute top-[180px] right-[205px] w-[300px] transform rotate-y-180"/> */}
-    <div className="absolute w-[250px] h-[250px] bg-[var(--theme-font-color)] -right-[150px] top-[300px] rotate-[45deg]" />
+    <div className="hidden md:block absolute w-[250px] h-[250px] bg-[var(--theme-font-color)] -right-[150px] top-[300px] rotate-[45deg]" />
   </section>
 );
 

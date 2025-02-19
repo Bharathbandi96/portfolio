@@ -38,7 +38,7 @@ const ContactForm = () => {
                     message: '',
                 })
             } else {
-                setStatus(result.error);
+                setStatus('There is error in handling mail service');
             }
         } catch (error) {
             if (error) {
@@ -49,7 +49,7 @@ const ContactForm = () => {
         }
     };
     return (
-        <div className='block w-[45%]'>
+        <div className='block w-[100%] md:w-[45%]'>
             <h2 className='text-[2rem] mb-4 text-[var(--secondary-font-color)]'>Contact Me</h2>
             <form className='max-w-[500px] my-0 mx-auto' onSubmit={handleSubmit}>
                 <input
@@ -79,7 +79,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                 ></textarea>
                 {status && <p className='px-2 text-[var(--secondary-font-color)]'>
-                    {JSON.stringify(status)}
+                    {status}
                 </p>}
                 <button type="submit" className='border border-[var(--theme-font-color)] py-[0.8rem] px-[1.5rem] rounded-full font-bold text-[var(--theme-font-color)] bg-[var(--background)] hover:text-[var(--background)] hover:bg-[var(--theme-font-color)]'>Send Message</button>
             </form>

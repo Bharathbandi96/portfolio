@@ -36,7 +36,7 @@ const TypingAnimationWithPause = () => {
   }, [displayedText, charIndex, isDeleting, delay, textArray, index]);
 
   return (
-    <div style={{ fontFamily: "monospace", fontSize: "24px", color: 'var(--theme-font-color)' }}>
+    <div className='font-[monospace] text-[16px] md:text-[24px] text-[var(--theme-font-color)]'>
       {displayedText}
       <span className="cursor">|</span>
     </div>

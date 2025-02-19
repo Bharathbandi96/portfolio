@@ -3,9 +3,9 @@ import Link from 'next/link';
 import ThemeIcon from './Theme';
 import styles from '../component_styles/components.module.css';
 
-const Header = () => (<header className='flex font-[cursive] p-4 justify-between items-center bg-[var(--primary-color)] my-0 mx-[40px]'>
+const Header = () => (<header className='flex p-8 justify-between items-center bg-[var(--primary-color)] my-0 md:mx-[40px]'>
   <Link href='#home' className='text-[var(--theme-font-color)] font-extrabold'>Portfolio.</Link>
-  <nav className='flex items-center'>
+  <nav className='hidden  md:flex items-center'>
     <ul className='inline-flex gap-8'>
       <li style={{ '--i': '1' } as React.CSSProperties}>
         <Link href="#home" className={styles.navLinks}>

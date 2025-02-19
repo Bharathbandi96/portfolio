@@ -2,9 +2,9 @@ import Link from "next/link";
 import { projectList } from './data';
 
 const Projects = () => (
-  <section className='text-[var(--secondary-font-color)] bg-[var(--primary-color) px-14 py-16 text-center ]' id='projects'>
+  <section className='text-[var(--secondary-font-color)] bg-[var(--primary-color) p-8 md:px-14 md:py-16 text-center ]' id='projects'>
     <h2 className='text-[var(--secondary-font-color)] mb-4 text-[2rem]'>My Projects</h2>
-    <div className='grid grid-cols-3 justify-center col-span-1 gap-8 mt-8'>
+    <div className='grid md:grid-cols-3 justify-center col-span-1 gap-8 mt-8'>
       {/* <div>
           <img src='Todo.png' />
           <div>

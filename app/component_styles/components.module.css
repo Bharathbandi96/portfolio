@@ -1,5 +1,5 @@
 .navLinks {
-  @apply inline-flex text-[var(--foreground)] opacity-0 font-extrabold animate-animTop [animation-delay:calc(0.2s_*_var(--i))] hover:text-[var(--theme-font-color)]
+  @apply inline-flex text-[var(--foreground)] opacity-0 font-bold animate-animTop [animation-delay:calc(0.2s_*_var(--i))] hover:text-[var(--theme-font-color)]
 }
 
 .theme {
@@ -11,7 +11,7 @@
 }
 
 .linkButton {
-  @apply inline-block mt-6 px-6 py-3 bg-[var(--theme-font-color)] text-[var(--background)] rounded-full font-bold uppercase no-underline mr-4 border border-[var(--theme-font-color)] animate-animLeft hover:text-[var(--theme-font-color)] hover:bg-[var(--background)]
+  @apply inline-block mt-6 mr-2 md:mr-4 px-4 md:px-6 py-3 bg-[var(--theme-font-color)] text-[var(--background)] rounded-full font-bold uppercase no-underline border border-[var(--theme-font-color)] animate-animLeft hover:text-[var(--theme-font-color)] hover:bg-[var(--background)]
 }
 
 .contactImageContainer {

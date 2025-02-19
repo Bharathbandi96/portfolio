@@ -2,7 +2,7 @@ import SkillBar from './skill-bar';
 import { skills } from './data';
 
 const Skills = () => (
-  <div className="p-6">
+  <div className="p-0 md:p-6">
     {skills.map((skill, index) => (
       <SkillBar key={index} data={skill} />
     ))}
