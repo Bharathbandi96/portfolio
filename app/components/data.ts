@@ -7,7 +7,7 @@ const summary: string = `Creative and detail-oriented Full Stack Developer with 
       Additionally, as a Data Science graduate, I am skilled in Python, SQL, and R, with proven
       expertise in statistical analysis, machine learning, and predictive modelling.`
 
-const headline: string = 'Specalized in creating efficient and engaging web solutions. I focus on delivering high-quality, user-centered applications.';
+const headline: string = 'Specalized in creating efficient and engaging web solutions with a strong focus on delivering high-quality, user-centered applications.';
 
 const skills: ISkills[] = [
     {

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../component_styles/components.module.css';
 
 const QuickContacts = () => (
-    <div className='block w-[45%]'>
+    <div className='block w-[100%] md:w-[45%] pb-10 md-pb-0'>
         <h2 className='text-[2rem] mb-4 text-[var(--secondary-font-color)]'>Quick Contact</h2>
         <p className={styles.contactImageContainer}>
             <i className={`${styles.contactImage} bx bxs-phone`} />
