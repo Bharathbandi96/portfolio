@@ -10,6 +10,14 @@
   @apply w-[35px] h-[35px] text-[22px] p-[6px] border border-[var(--theme-font-color)] text-[var(--theme-font-color)] mr-[20px] rounded-full hover:text-[var(--primary-color)] hover:bg-[var(--theme-font-color)] hover:border-[var(--theme-font-color)];
 }
 
+.serviceIcons {
+  @apply text-[22px] md:text-[54px] p-[6px] text-[var(--theme-font-color)] rounded-full;
+}
+
+.scrollTop {
+  @apply w-[40px] h-[40px] text-[28px] p-[4px] border-[2px] border-[var(--theme-font-color)] text-[var(--theme-font-color)] mr-[20px] rounded-full hover:text-[var(--primary-color)] hover:bg-[var(--theme-font-color)] hover:border-[var(--theme-font-color)];
+}
+
 .linkButton {
   @apply inline-block mt-6 mr-2 md:mr-4 px-4 md:px-6 py-3 bg-[var(--theme-font-color)] text-[var(--background)] rounded-full font-bold uppercase no-underline border border-[var(--theme-font-color)] animate-animLeft hover:text-[var(--theme-font-color)] hover:bg-[var(--background)]
 }
@@ -23,7 +31,7 @@
 }
 
 .formFields {
-  @apply w-[100%] p-4 my-[0.5rem] mx-0 border-[var(--secondary-font-color)] rounded-[5px] text-[var(--secondary-font-color)]
+  @apply w-[100%] p-4 my-[0.5rem] mx-0 text-[var(--secondary-font-color)] focus-visible:outline-0 rounded-[5px] bg-[var(--secondary-color)]
 }
 
 .topSkills {

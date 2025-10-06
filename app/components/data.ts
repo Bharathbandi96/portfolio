@@ -1,136 +1,151 @@
-import { IExperience, IEducation, ISkills, IProjects } from './types';
 
-const summary: string = `Creative and detail-oriented Full Stack Developer with a passion for creating visually captivating
-      and highly efficient websites and web applications. With more than 4 years of hands-on experience
-      in web development, I possess a comprehensive understanding of front-end technologies, including
-      React JS, Node JS, TypeScript, Mongo DB, JavaScript, HTML5, CSS3, and responsive design principles.
-      Additionally, as a Data Science graduate, I am skilled in Python, SQL, and R, with proven
-      expertise in statistical analysis, machine learning, and predictive modelling.`
+const projects = [
+    {
+      title: "FinancePro - Finance Dashboard",
+      description: "A responsive React application built to simplify personal finance management. It allows users to track income, expenses, and budgets with an intuitive interface and real-time updates.",
+      image: "https://blog.board.com/wp-content/uploads/2024/03/2718x1024_Blog_header_Finance-Predictions-2024-1920x723.jpg",
+      technologies: ["React", "TypeScript", "Redux", "React Charts", "Tailwind CSS"],
+      github: "https://github.com/Bharathbandi96/FinanceDashboard",
+      live: "https://financedashboard-alpha-jet.vercel.app/",
+      featured: true,
+      metrics: ""
+    },
+    {
+      title: "ReviewHub - Entertainment Platform",
+      description: "Review Hub is a React-based web application that showcases featured products and highlights the best offers from multiple platforms. It helps users compare deals and make smarter purchasing decisions easily.",
+      image: "https://cdn2.paraty.es/dataseekers/images/c37cd7910984460",
+      technologies: ["Next.js", "React.js", "TypeScript", "React Charts", "Tailwind CSS"],
+      github: 'https://github.com/Bharathbandi96/ReviewHub',
+      live: 'https://review-hub-ten.vercel.app/',
+      featured: true,
+      metrics: ""
+    },
+    {
+      title: "BingeStream - Entertainment Platform",
+      description: "An entertainment platform built using React, featuring categorized movie and series from various genres. Focused on clean UI, responsiveness, and smooth user experience.",
+      image: "https://images.theconversation.com/files/533696/original/file-20230623-26-foki4n.jpg?ixlib=rb-4.1.0&rect=0%2C620%2C6800%2C3400&q=45&auto=format&w=1356&h=668&fit=crop",
+      technologies: ["React", "TypeScript", "React Player", "React Router", "Tailwind CSS"],
+      github: 'https://github.com/Bharathbandi96/BingeStream',
+      live: 'https://binge-stream.vercel.app/',
+      featured: false,
+      metrics: ""
+    },
+    {
+      title: "Notifier - Plug-n-Play Feature",
+      description: "A reusable and globally exposed Notifier feature developed in JavaScript (ES6+). It provides a unified way to trigger interactive notifications including info, success, warning, error, and confirmation alerts, across the app.",
+      image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["JavaScript(ES6+)", "Global ProtoType", "HTML/CSS", "Vite"],
+      github: 'https://notifiercomponent.vercel.app/',
+      live: 'https://notifiercomponent.vercel.app/',
+      featured: false,
+      metrics: ""
+    },
+    {
+      title: "ToDo - Task Management Platform",
+      description: "A JavaScript-based To-Do List app implemented using the Model-View-Controller (MVC) pattern. It leverages Web Storage APIs for saving tasks and focuses on code structure, scalability, and best practices rather than visual design.",
+      image: "https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["JavaScript(ES6+)", "MVC", "Web Storage APIs", "HTML/CSS"],
+      live: 'https://mytodo-application.vercel.app/',
+      github: 'https://mytodo-application.vercel.app/',
+      featured: false,
+      metrics: ""
+    },
+  ];
 
-const headline: string = 'Specalized in creating efficient and engaging web solutions with a strong focus on delivering high-quality, user-centered applications.';
+  const skillCategories = [
+    {
+      title: "Frontend",
+      color: "from-blue-500 to-cyan-500",
+      skills: [
+        { name: "React", level: 95, years: "5 years" },
+        { name: "TypeScript", level: 90, years: "5 years" },
+        { name: "JavaScript", level: 95, years: "5 years" },
+        { name: "Next.js", level: 85, years: "2 years" },
+        { name: "Tailwind CSS", level: 90, years: "3 years" },
+        // { name: "Redux.js", level: 75, years: "1 year" }
+      ]
+    },
+    {
+      title: "Backend & Database",
+      color: "from-green-500 to-emerald-500",
+      skills: [
+        { name: "Node.js", level: 85, years: "4 years" },
+        { name: "Python", level: 80, years: "3 years" },
+        { name: "Express.js", level: 85, years: "4 years" },
+        { name: "MongoDB", level: 85, years: "4 years" },
+        { name: "REST APIs", level: 90, years: "5 years" },
+        // { name: "GraphQL", level: 70, years: "2 years" }
+      ]
+    },
+    {
+      title: "Tools & Others",
+      color: "from-purple-500 to-pink-500",
+      skills: [
+        { name: "Git", level: 95, years: "5 years" },
+        { name: "Docker", level: 75, years: "2 years" },
+        { name: "AWS", level: 70, years: "2 years" },
+        // { name: "Figma", level: 85, years: "3 years" },
+        { name: "Jest/Testing", level: 80, years: "4 years" },
+        { name: "CI/CD", level: 75, years: "3 years" }
+      ]
+    }
+  ];
 
-const skills: ISkills[] = [
+  const experiences = [
     {
-        "name": "React",
-        "level": 90
+      company: "Anima People",
+      position: "Senior Full-Stack Developer",
+      location: "Manchester, UK",
+      period: "Feb 2025 - Aug 2025",
+      type: "Internship",
+      description: "Early-stage cybersecurity startup focused on developing solutions to identify and mitigate organizational risks. I built the frontend for survey creation and reporting dashboards, enabling risk analysis and visualization of security insights. Additionally, I established development best practices to ensure scalability, maintainability, and a strong engineering foundation.",
+      achievements: [
+        "Developed and optimized RESTful APIs using Node.js and Express, reducing response times by 20%.",
+"Optimized PostgreSQL database queries, reducing load times by 35%.",
+"Integrated third-party APIs and optimized API calls for efficient data handling.",
+"Integrated AI/ML models into backend services to analyze organizational risk and fraud detection, reducing financial risk"],
+      technologies: ["React.js", "Python", "TypeScript", "Artificial Engineering", "Machine Learning", "AWS", "PostgreSQL", "Tailwind CSS", "Azure"],
+      // website: "https://techcorp.com"
     },
     {
-        "name": "JavaScript",
-        "level": 90
+      company: "Boom Games",
+      position: "Senior Software Development Engineer",
+      location: "Bangalore, India",
+      period: "Jan 2023 - Sep 2023",
+      type: "Full-time",
+      description: "Early-stage gaming startup specializing in multiverse-themed card games, real-time gaming platforms, and secure payment processing systems. I designed and implemented an end-to-end bonuses and promotions handling system, fully integrated with the games to boost player engagement and retention.",
+      achievements: [
+        "Built and optimized React-based front-end features, integrating API-driven components to enhance user experience.",
+"Collaborated closely with backend developers to ensure seamless data flow and integration with gaming analytics.",
+"Implemented performance optimizations, reducing page load time by 20% using efficient state management techniques.",
+"Developed reusable UI components with TypeScript, reducing development time and improving maintainability.",
+"Configured Jest-based test suites for React components, ensuring high code quality and reliability.",
+"Mentored junior developers, conducting code reviews and knowledge-sharing sessions to improve team efficiency.",
+      ],
+      technologies: ["React.js", "Redux.js", "TypeScript", "Express.js", "MongoDB", "SQL", "RESTful API", "Tailwind CSS", "Gitlab"],
+      // website: "https://innovatelab.io"
     },
     {
-        "name": "TypeScript",
-        "level": 80
+      company: "AgilePoint",
+      position: "Senior Frontend Developer",
+      location: "Bangalore, India",
+      period: "Jul 2019 - Dec 2022",
+      type: "Full-time",
+      description: "Worked on a low/no-code B2B platform used to create enterprise applications, where I took ownership of complex projects from design to delivery. In addition to development, I actively mentored junior developers, conducted code reviews, and collaborated with the design team to ensure high-quality, user-friendly solutions.",
+      achievements: [
+        "Migrated legacy jQuery components to modern React.js with TypeScript, boosting performance by 25%.",
+"Built a dynamic UI framework that allowed JSON-driven UI generation, reducing development efforts by over 30%.",
+"Led frontend development for multiple projects, ensuring adherence to best coding practices and SOLID principles.",
+"Redesigned legacy UI using Figma, enhancing usability and improving customer satisfaction.",
+"Implemented functional and unit testing using Jest and React Testing Library, ensuring robust code quality",
+      ],
+      technologies: ["React", "TypeScript", "JavaScript", "Styled Components", "JWT", "RESTFul API", "JIRA", "Gitlab", "Figma"],
+      website: "https://startupxyz.com"
     },
-    {
-        "name": "Node.js",
-        "level": 75
-    },
-    {
-        "name": "Express",
-        "level": 70
-    },
-    {
-        "name": "Next",
-        "level": 80
-    },
-    {
-        "name": "Tailwind CSS",
-        "level": 85
-    },
-    {
-        "name": "HTML5/CSS3",
-        "level": 90
-    },
-];
+  ];
 
-const experiences: IExperience[] = [
-    {
-        role: "Full Stack Developer - Intern",
-        company: "People Anima",
-        duration: "Feb 2025 - Present",
-        description: `• Developing backend API endpoints for handling data operations.
-      • Designing interactive user interface using Tailwind CSS.
-      • Handling CI/CD pipelines and Azure DevOps for code maintanence.`,
-    },
-    {
-        role: "Senior SDE",
-        company: "Boom Games Pvt Ltd",
-        duration: "Jan 2023 - Sep-2023",
-        description: `• Developed API-driven features for user engagement, including bonus tracking, promotions, and personalized challenges following agile methodologies.
-      • Optimized backend performance by 20% by restructuring game data on MongoDB and SQL databases.
-      • Designed interactive user interfaces for a gaming platform using React and TypeScript to handle Bonus, Promotions and User settings.
-      • Configured test suits for backend API endpoints and React components with Jest to ensure high performance and reliability. 
-      `,
-    },
-    {
-        role: "Senior Software Developer",
-        company: "AgilePoint Pvt Ltd",
-        duration: "Jul 2019 - Dec 2022",
-        description: `• Migrated legacy components from jQuery to modern stacks with React.js and TypeScript and improved performance by 25%. 
-      • Created a React-based framework to build UI from JSON that reduced development time by more than 30%.
-      • Redesigned legacy interfaces into modern, user-friendly layouts using Figma, enhancing overall application UI/UX.
-      • Implemented modular, reusable components, integrating with diverse APIs to enhance application capabilities.
-      • Implemented robust testing mechanisms using Cypress for front-end and automation along with unit testing and peer testing and reviews.
-      `,
-    },
-];
-
-const education: IEducation[] = [
-    {
-        role: "MSc Data Science",
-        company: "University of Essex",
-        duration: "Oct 2023 - Sep 2024",
-        place: "Colchester, United Kingdom"
-    },
-    {
-        role: "Bachelor's in Computer Science",
-        company: "KS Institute of Technology",
-        duration: "Jul 2015 - Jun 2019",
-        place: "Bangalore - India"
-    },
-]
-
-const projectList: IProjects[] = [
-    {
-        title: "Notifier Component",
-        imageName: 'Notifier',
-        description: "The Notifier Component is a versatile notification system designed to enhance user interactions with real-time alerts. It supports five distinct notification types: success, information, confirm, warning, and error. Each type maintains its own independent stack, allowing multiple notifications of the same type to be queued and displayed sequentially. Notifications are shown one at a time for 3 seconds by default, with an intuitive hover feature that keeps the notification visible until the mouse is removed. The component is globally accessible, enabling seamless integration and usage from anywhere within the application.",
-        image: "notifier.jpg",
-        link: 'https://notifiercomponent.vercel.app/',
-        type: 'Feature'
-    },
-    {
-        title: "To-Do List Application",
-        imageName: 'To-do List',
-        description: "A feature-rich To-Do List application designed with an MVC architecture to ensure a clear separation of concerns and maintainability. The application supports full CRUD operations-allowing users to create, read, update, and delete tasks effortlessly. It leverages local and session storage to preserve tasks across sessions or within a single browsing session, based on user preference. Users can filter tasks dynamically by their status: All, Completed, or Pending, for enhanced task management. Additionally, it includes a convenient option to clear all completed tasks in one click, ensuring an efficient and user-friendly experience.",
-        image: 'ToDo.png',
-        link: 'https://mytodo-application.vercel.app/',
-        type: 'App'
-    },
-    // {
-    //     title: "ID Generator",
-    //     imageName: 'Unique ID Generator',
-    //     description: "This component is a high-performance unique ID generator that leverages a Web Worker to ensure smooth operation without blocking the main thread. It maintains a pool of 1,000 pre-generated unique IDs at all times, efficiently providing IDs as needed. When IDs are used, the component dynamically generates new ones to replenish the pool, ensuring a continuous supply. By offloading the generation process to a Web Worker, it optimizes performance and prevents UI lag, making it ideal for applications that require scalable and efficient ID management.", 
-    //     image: 'ToDo.png',
-    //     type: 'Feature',
-    //     link: 'https://stackblitz.com/edit/mytodo-application?file=index.html'
-    // },
-    {
-        title: "Document Viewer",
-        imageName: 'Document Viewer',
-        description: "A Document Viewer is a web-based application that allows users to view and manage various document formats, such as PDFs, Word, Excel sheets, and images, without the need for additional software installations. It provides an intuitive interface where users can easily view folders, and files within documents efficiently. The viewer includes a sorting feature that enables users to organize files alphabetically or by date, making it easier to locate specific documents. Additionally, it offers a search functionality that allows users to quickly find files by name, ensuring seamless document access and management.",
-        image: 'ToDo.png',
-        link: 'https://document-viewer-five.vercel.app/',
-        type: 'App'
-    },
-];
-
-export {
-    summary,
-    headline,
-    skills,
+  export {
+    projects,
+    skillCategories,
     experiences,
-    education,
-    projectList
-}
+  }

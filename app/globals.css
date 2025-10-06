@@ -2,40 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root{
-  --background: #ffffff;
-  --foreground: #171717;
-  --theme-font-color: #754ef9;
-  --primary-color: #ffffff;
-  --secondary-color: #f3f3f3;
-  --secondary-font-color: #3b4455;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    line-height: 1.6;
+  }
 }
 
-.theme1 {
-  --theme-font-color: #754ef9;
+@layer components {
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 }
 
-.theme2 {
-  --theme-font-color: #067cb2; 
-  /* #08105b; */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.theme3 {
-  --theme-font-color: #0077fe;
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
 }
 
-.theme4 {
-  --theme-font-color: orange;
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
 }
 
-body {
-  color: var(--foreground);
-  /* background: var(--background); */
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-html {
-  scroll-behavior: smooth;
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: transform, box-shadow, background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Enhanced focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }

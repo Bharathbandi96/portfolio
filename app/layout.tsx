@@ -1,27 +1,15 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import React from 'react';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import App from './page.tsx'
+import './globals.css';
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Bharath's portfolio app",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <head>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
-      </head>
-      <body
-        id='main-body'
-        className='theme1'
-      >
-        {children}
-      </body>
-    </html>
-  );
-}
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </StrictMode>
+);

@@ -1,17 +1,27 @@
-import Layout from './components/Layout';
-import Home from './components/Home';
+import Navigation from './components/Header';
+import Hero from './components/Home';
 import About from './components/About';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Experience from './components/Experience';
+// import Testimonials from './components/Testimonials';
+import Footer from './components/Footer';
 
-
-export default function App() {
+function App() {
   return (
-    <Layout>
-      <Home />
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero />
       <About />
+      <Skills />
+      <Experience />
       <Projects />
+      {/* <Testimonials /> */}
       <Contact />
-    </Layout>
+      <Footer />
+    </div>
   );
 }
+
+export default App;
